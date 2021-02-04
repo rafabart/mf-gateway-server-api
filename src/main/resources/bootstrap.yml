@@ -2,9 +2,13 @@ spring:
   application:
     name: mf-gateway-server-api
 
+  profiles:
+    active: ${PROFILE}
+
   cloud:
     config:
       uri: ${CONFIG_SERVER_URL}
+      label: ${BRANCH}
 
 management:
   endpoints:
